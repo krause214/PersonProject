@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_241" class="java.beans.XMLDecoder">
+ <object class="com.company.Student">
+  <void property="age">
+   <int>19</int>
+  </void>
+  <void property="curator">
+   <object class="com.company.Person">
+    <void property="age">
+     <int>35</int>
+    </void>
+    <void property="height">
+     <int>165</int>
+    </void>
+    <void property="name">
+     <string>Ekaterina</string>
+    </void>
+    <void property="weight">
+     <int>65</int>
+    </void>
+   </object>
+  </void>
+  <void property="height">
+   <int>180</int>
+  </void>
+  <void property="institute">
+   <string>IstSu</string>
+  </void>
+  <void property="name">
+   <string>Valera</string>
+  </void>
+  <void property="weight">
+   <int>80</int>
+  </void>
+ </object>
+</java>
