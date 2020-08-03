@@ -12,10 +12,7 @@ public class Student extends Person {
     }
 
     public Student(Person person, String institute, Person curator, YearOfStudy yearOfStudy) {
-        this.setAge(person.getAge());
-        this.setHeight(person.getHeight());
-        this.setName(person.getName());
-        this.setWeight(person.getWeight());
+        super(person.getAge(), person.getHeight(), person.getWeight(), person.getName(), person.getGender());
         this.institute = institute;
         this.curator = curator;
         this.yearOfStudy = yearOfStudy;
