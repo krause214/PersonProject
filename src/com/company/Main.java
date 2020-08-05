@@ -11,6 +11,8 @@ public class Main {
                 );
         System.out.println(nStudent.toString());
 
+        nStudent.sayWhoAmI();
+
     }
 }
 

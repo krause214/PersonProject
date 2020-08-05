@@ -1,15 +1,27 @@
 package com.company;
 
 public class Worker extends Person {
-    private int salary;
+    private int salary = 0;
     private int amountOfUsefulAction = 0;
 
     public Worker() {
+        super();
     }
 
     public Worker(Person person, int salary){
         super(person.getAge(), person.getHeight(), person.getWeight(), person.getName(), person.getGender());
         setSalary(salary);
+    }
+
+    @Override
+    public void sayWhatICanDo() {
+        System.out.println("I can work!");
+    }
+
+    @Override
+    public void sayWhoAmI() {
+        System.out.println("I am Worker." + "\nMy name is: " + this.getName() + ".\nI am " + this.getAge() + " years old.");
+        this.sayWhatICanDo();
     }
 
     public void doWork(){

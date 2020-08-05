@@ -18,6 +18,17 @@ public class Student extends Person {
         this.yearOfStudy = yearOfStudy;
     }
 
+    @Override
+    public void sayWhatICanDo() {
+        System.out.println("I can learn a lot!");
+    }
+
+    @Override
+    public void sayWhoAmI() {
+        System.out.println("I am Student." + "\nMy name is: " + this.getName() + ".\nI am " + this.getAge() + " years old.");
+        this.sayWhatICanDo();
+    }
+
     public String getInstitute() {
         return institute;
     }

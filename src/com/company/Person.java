@@ -2,19 +2,23 @@ package com.company;
 
 import java.io.Serializable;
 
-public class Person implements Serializable, Cloneable {
+public class Person implements PersonActions,Serializable, Cloneable {
 
     static {
         String specie = "Homo";
     }
 
-    private String name = "";
-    private int age = 0;
-    private int height = 0;
-    private int weight = 0;
+    private String name;
+    private int age;
+    private int height;
+    private int weight;
     private Gender gender;
 
     public Person(){
+        this.name = "NoName";
+        this.age = 0;
+        this.height = 0;
+        this. weight = 0;
         this.gender = Gender.NOT_DEFINED;
     }
 
@@ -22,6 +26,10 @@ public class Person implements Serializable, Cloneable {
         this.name = name;
         this.age = age;
         this.gender = gender;
+
+        this.weight = 0;
+        this.age = 0;
+        this.height = 0;
     }
 
     public Person(int age, int height, int weight, String name, Gender gender){
@@ -32,7 +40,16 @@ public class Person implements Serializable, Cloneable {
         this.gender = gender;
     }
 
+    @Override
+    public void sayWhatICanDo() {
+        System.out.println("I can live)");
+    }
 
+    @Override
+    public void sayWhoAmI() {
+        System.out.println("I am Person." + "\nMy name is: " + this.name + ".\nI am " + this.age + " years old.");
+        this.sayWhatICanDo();
+    }
 
     @Override
     public boolean equals(Object o){
