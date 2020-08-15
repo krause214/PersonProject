@@ -14,6 +14,8 @@ public class Person implements PersonActions,Serializable, Cloneable {
     private int weight;
     private Gender gender;
 
+    //Constructors
+
     public Person(){
         this.name = "NoName";
         this.age = 0;
@@ -40,6 +42,8 @@ public class Person implements PersonActions,Serializable, Cloneable {
         this.gender = gender;
     }
 
+    //PersonActions Interface implementation
+
     @Override
     public void sayWhatICanDo() {
         System.out.println("I can live)");
@@ -50,6 +54,8 @@ public class Person implements PersonActions,Serializable, Cloneable {
         System.out.println("I am Person." + "\nMy name is: " + this.name + ".\nI am " + this.age + " years old.");
         this.sayWhatICanDo();
     }
+
+    //equals, clone
 
     @Override
     public boolean equals(Object o){
@@ -70,9 +76,13 @@ public class Person implements PersonActions,Serializable, Cloneable {
         return super.clone();
     }
 
+    //methods: printClass
+
     public void printClass(){
         System.out.println("Person");
     }
+
+    //Getters and Setters
 
     public void setWeight(int weight){
         this.weight = weight;
@@ -113,6 +123,8 @@ public class Person implements PersonActions,Serializable, Cloneable {
     public void setGender(Gender gender) {
         this.gender = gender;
     }
+
+    //toString
 
     @Override
     public String toString() {
